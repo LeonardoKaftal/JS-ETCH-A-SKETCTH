@@ -1,0 +1,91 @@
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+html {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+p 
+{
+    font-family: 'Roboto', sans-serif;    
+    font-size: 20px;
+    line-height: 1.6;
+}
+h1
+{
+    font-family: 'Poppins', sans-serif;
+    font-size: 45px;
+    line-height: 1.6;
+}
+h2
+{
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    line-height: 1.6;
+}
+h3
+{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    line-height: 1.6;
+}
+h4
+{
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    line-height: 1.6;
+}
+h5
+{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+}
+h6
+{
+    font-family: 'Poppins', sans-serif;
+    
+    line-height: 1.6;
+}
+
+:root {
+    --repeat-grid: 10
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.grid-container {
+    position: relative;
+    bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(var(--repeat-grid),1fr);
+    grid-template-rows: repeat(var(--repeat-grid),1fr);
+    border: solid 1px;
+    height: 60vh;
+    width: 60vw;
+}
+
+
+.btn-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.control-btn-container > button {
+    margin-left: 1.5rem;
+}
+
+.color-btn-container > button {
+    margin-left: 1.5rem;
+}
+
