@@ -48,7 +48,6 @@ h5
 h6
 {
     font-family: 'Poppins', sans-serif;
-    
     line-height: 1.6;
 }
 
@@ -74,7 +73,6 @@ body {
     height: 60vh;
     width: 60vw;
 }
-
 
 .btn-container {
     display: flex;
