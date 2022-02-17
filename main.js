@@ -38,14 +38,16 @@ applyColorButton.addEventListener("click", (e)=> {
 
 
 function createGrid() {
-    // append div to the grid container n time the result of gridSize * gridSize ex: 16 * 16 grid 
+    // append div to the grid container n time the result of gridSize * gridSize ex: 10 * 10 grid 
     for (let i = 0; i < gridSize * gridSize; i++) {
         container.appendChild(document.createElement("div")).classList.add("grid-element")
         //saving into a variable all the appended div and creating an array from them
         gridElement = document.querySelectorAll(".grid-element")
         gridElementArray = Array.from(gridElement)
         // adding an event listener to all the grid element stored into the array
-
+        container.addEventListener("mouseleave", ()=> {
+            isPressed = false
+        })
         // one for adding the hovering effect
         gridElementArray[i].addEventListener("mouseover", (e) => {
             colorTemp = gridElementArray[i].style.backgroundColor
@@ -53,7 +55,7 @@ function createGrid() {
         })
         gridElementArray[i].addEventListener("mouseleave", (e) => {
             if (gridElementArray[i].style.backgroundColor === "black" && colorTemp !== "white" && colorTemp !== '') {
-                gridElementArray[i].style.backgroundColor = `${colorChoice}`
+                gridElementArray[i].style.backgroundColor = `${colorTemp}`
             }
             if (gridElementArray[i].style.backgroundColor === "black" && colorTemp === "white" || colorTemp === '' ){
                 gridElementArray[i].style.backgroundColor = "white"
@@ -72,7 +74,7 @@ function createGrid() {
             }
         })
 
-        gridElementArray[i].addEventListener("mouseup", ()=> {
+        gridElementArray[i].addEventListener("mouseup", (e)=> {
             isPressed = false
         })
         
